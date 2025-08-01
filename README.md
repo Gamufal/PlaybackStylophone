@@ -1,7 +1,7 @@
 # PlaybackStylophone
 Stylofon oparty na mikrokontrolerze z możliwością odtworzenia zapisanego wcześniej utworu.
 
-# Cel projektu
+## Cel projektu
 Celem jest samodzielne zaprojektowanie i wykonanie własnej wersji stylofonu opartego na mikrokontrolerze, zainspirowanej klasycznym instrumentem elektronicznym z ubiegłego wieku, a jednocześnie wzbogaconej o możliwości, jakie daje współczesna technologia cyfrowa. Realizacja urządzenia ma na celu rozwinięcie umiejętności z zakresu elektroniki, programowania oraz syntezy dźwięku.
 
 ## Funkcjonalności:
@@ -16,10 +16,10 @@ Celem jest samodzielne zaprojektowanie i wykonanie własnej wersji stylofonu opa
 - Przenośność dzięki wbudowanemu zasilaniu bateryjnemu
 - Szybki start i gotowość do grania po uruchomieniu
 
-# Mikrokontroler 
+## Mikrokontroler 
 Urządzenie wykorzystuje [Raspberry Pi Pico 2](https://www.raspberrypi.com/products/raspberry-pi-pico-2). 
 
-# Kompatybilność
+## Kompatybilność
 Urządzenie jest kompatybilne z wszystkimi mikrokontrolerami serii Pico od Raspberry Pi. 
 
 ## Jak uruchomić urządzenie?
