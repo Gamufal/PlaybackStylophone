@@ -1,3 +1,7 @@
+# Software for Playback Stylophone 
+# Made by Gamufal
+# Version: 25.8.1
+
 from machine import Pin, ADC, I2C, PWM
 import ssd1306
 import json
@@ -10,15 +14,18 @@ display = ssd1306.SSD1306_I2C(128, 64, i2c)
 # LED diode initialization
 led = Pin(13, Pin.OUT)
 
-# Button initialization 
+# Buttons initialization 
 btn_down  = Pin(6,  Pin.IN, Pin.PULL_UP)
 btn_up    = Pin(8,  Pin.IN, Pin.PULL_UP)
 btn_right = Pin(7,  Pin.IN, Pin.PULL_UP)
 btn_left  = Pin(9,  Pin.IN, Pin.PULL_UP)
 btn_ok    = Pin(10, Pin.IN, Pin.PULL_UP)
 
-# Initialization of ADC and PWM for the speaker 
+# ADC Initialization for stylus 
 adc = ADC(Pin(26))
+adc_thresholds = [4500, 9000, 13000, 17000, 20000, 24000, 29000, 34000, 39000, 46000, 54000, 64000]
+
+# PWM Initialization for the speaker
 spk = PWM(Pin(16))
 spk.duty_u16(0)
 
@@ -27,13 +34,10 @@ lower_octave  = [131, 139, 147, 156, 165, 175, 185, 196, 208, 220, 233, 247]
 middle_octave = [261, 277, 293, 311, 329, 349, 369, 392, 415, 440, 466, 493]
 higher_octave = [523, 554, 587, 622, 659, 698, 739, 784, 830, 880, 932, 987]
 
-# ADC thresholds
-adc_thresholds = [4500, 9000, 13000, 17000, 20000, 24000, 29000, 34000, 39000, 46000, 54000, 64000]
-
 # Global settings
 volume = 4   # 1-8
-tone = 2     # 1: dolna, 2: środkowa, 3: górna
-recording = []  # Lista par (freq, timestamp)
+tone = 2     # 1-3
+recording = []  # (freq, timestamp), ...
 
 # Saves a single setting to a JSON file
 def save_single_setting(key, value):
@@ -276,7 +280,7 @@ def play_menu():
             return
         sleep(0.05)
 
-# Main loop of the application
+# Main loop
 def main():
     selected_item = 0
     while True:
@@ -301,5 +305,7 @@ def main():
                 play_menu()
         sleep(0.05)
 
+# Program start
 load_settings()
 main()
+
