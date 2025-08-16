@@ -15,6 +15,7 @@ Celem jest samodzielne zaprojektowanie i wykonanie własnej wersji stylofonu opa
 - Intuicyjna obsługa ekranu za pomocą przycisków 
 - Przenośność dzięki wbudowanemu zasilaniu bateryjnemu
 - Szybki start i gotowość do grania po uruchomieniu
+- Modułowość umożliwiająca łatwą naprawę w razie uszkodzenia komponentów
 
 ## Mikrokontroler 
 Urządzenie wykorzystuje [Raspberry Pi Pico 2](https://www.raspberrypi.com/products/raspberry-pi-pico-2). 
