@@ -17,6 +17,9 @@ Celem jest samodzielne zaprojektowanie i wykonanie własnej wersji stylofonu opa
 - Szybki start i gotowość do grania po uruchomieniu
 - Modułowość umożliwiająca łatwą naprawę w razie uszkodzenia komponentów
 
+## Płytka drukowana
+![PCB Layout](https://github.com/Gamufal/PlaybackStylophone/blob/main/PCB_Layout.png?raw=true)
+
 ## Mikrokontroler 
 Urządzenie wykorzystuje [Raspberry Pi Pico 2](https://www.raspberrypi.com/products/raspberry-pi-pico-2). 
 
